@@ -68,8 +68,11 @@ void		__print_k( unsigned char *, int );
 /* Return an allocated llist_crt pointer. */
 /* /!\ This function uses the calloc */
 t_llist_crt		*__ss_init_llist_crt( void );
-t_list *	__ss_llist_crt_push_back( t_llist_crt **, void *, size_t, void (*)(void *));
-t_list *	__ss_llist_crt_push_front( t_llist_crt **, void *content, size_t, void(*)(void *) );
+t_list *	__ss_llist_crt_push_back( t_llist_crt **, void *, size_t, void (*) (void *));
+t_list *	__ss_llist_crt_push_front( t_llist_crt **, void *content, size_t, void (*)(void *) );
+
+
+void		__ss_callback_increase_of_items( void * );
 
 
 t_list		*ft_lstnew( void const *, size_t );
