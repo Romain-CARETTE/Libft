@@ -20,7 +20,6 @@
 # include <arpa/inet.h>
 # include <netinet/tcp.h>
 # include <sys/mman.h>
-# include <openssl/sha.h>
 # include <fcntl.h>
 # include <sys/stat.h>
 # include <publib.h>
@@ -91,7 +90,6 @@ char		*ft_itoa(int);
 WINDOW		*ft_create_win( int, int, int, int );
 void		_time( char * );
 char		*make_rand_str( char *, int );
-void		sha256( char *, size_t, unsigned char * );
 char 		*get_ip( struct sockaddr_in * );
 uint32_t	get_port ( struct sockaddr_in * );
 unsigned short	__rc_checksum( void *, int );
