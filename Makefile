@@ -1,6 +1,6 @@
 NAME=libft.a
 CC=gcc
-CFLAGS= -Wall -Wextra
+CFLAGS= -Wall -Wextra -Werror
 RM=rm -f
 LDFLAGS=-L.
 LDLIBS=-lft -lm -lcrypto -lpub
