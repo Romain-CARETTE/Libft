@@ -23,6 +23,7 @@
 # include <fcntl.h>
 # include <sys/stat.h>
 # include <publib.h>
+# include <elf.h>
 
 # define _unused	__attribute__((unused))
 # define ARRAY_SIZE(a) (sizeof(a) / sizeof(a[0]))
@@ -100,5 +101,6 @@ int		_random_except( int, int, int *, int );
 void		ft_push_back( t_list **, t_list * );
 void		ft_llist_splice( t_list **, t_list *, t_list * );
 void 		reverse_llist( t_list * );
+uint8_t		_is_elf( const char * );
 
 #endif
