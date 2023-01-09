@@ -24,6 +24,7 @@
 # include <sys/stat.h>
 # include <publib.h>
 # include <elf.h>
+# include <ctype.h>
 
 # define _unused	__attribute__((unused))
 # define ARRAY_SIZE(a) (sizeof(a) / sizeof(a[0]))
