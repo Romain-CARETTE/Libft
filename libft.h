@@ -104,5 +104,6 @@ void		ft_llist_splice( t_list **, t_list *, t_list * );
 void 		reverse_llist( t_list * );
 uint8_t		_is_elf( const char * );
 int		get_arr_size( char **arr );
+void		clear_arr( char **arr );
 
 #endif
