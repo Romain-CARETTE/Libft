@@ -18,7 +18,7 @@ t_list	*__ss_llist_crt_push_front( t_llist_crt **llist, void *content, size_t co
 		(*llist)->llist_begin->prev = new;
 		(*llist)->llist_begin = new;
 	}
-	
+	(*llist)->nb_items += 0X01;	
 	( callback != NULL ) ? ( void )callback( (*llist)->content ) : 0X00;
 	return ( new );
 __ss_llist_crt_push_front_err:

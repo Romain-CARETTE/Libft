@@ -53,6 +53,7 @@ typedef struct		s_llist_crt
 	t_list		*llist_begin;
 	t_list		*llist_last;
 	void		*content;
+	size_t		nb_items;
 }			t_llist_crt;
 
 // DIFFIE HELLMAN
