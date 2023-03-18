@@ -1,38 +1,41 @@
 #include "libft.h"
 
-static void	lengths(int n, size_t *len, int *weight) {
-	if (n >= 0) {
-		*len = 0;
-		n = -n;
-	}
-	*weight = 1;
-	while (n / *weight < -9)
-	{
-		*weight *= 10;
-		*len += 1;
-	}
+char *reverse(char *str)
+{
+    char tmp, *src, *dst;
+    size_t len;
+    if (str != NULL)
+    {
+        len = strlen (str);
+        if (len > 1) {
+            src = str;
+            dst = src + len - 1;
+            while (src < dst) {
+                tmp = *src;
+                *src++ = *dst;
+                *dst-- = tmp;
+            }
+        }
+    }
+    return str;
 }
 
-char		*ft_itoa(int n)
+void ft_itoa(int n, char *s )
 {
-	int			weight;
-	size_t		len = 1;
-	lengths(n, &len, &weight);
-	char *str = (char *)calloc(sizeof(char), (len + 1));
-	if (str == NULL)
-		return (NULL);
-	size_t cur = 0;
-	if (n < 0)
-	{
-		str[cur] = '-';
-		cur++;
-	}
-	if (n > 0)
-		n = -n;
-	while (weight >= 1)
-	{
-		str[cur++] = -(n / weight % 10) + 48;
-		weight /= 10;
-	}
-	return (str);
+    int i, sign;
+
+    if ((sign = n) < 0)        /* record sign */
+        n = -n;                /* make n positive */
+    i = 0;
+
+    do {                       /* generate digits in reverse order */
+        s[i++] = n % 10 + '0'; /* get next digit */
+    } while ((n /= 10) > 0);   /* delete it */
+
+    if (sign < 0)
+        s[i++] = '-';
+
+    reverse(s);
+    s[i] = '\0';
+    return;
 }

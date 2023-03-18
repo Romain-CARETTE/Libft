@@ -1,6 +1,6 @@
 NAME=libft.a
 CC=gcc
-CFLAGS= -Wall -Wextra -Werror
+CFLAGS= -Wall -Wextra -Werror -fsanitize=address
 RM=rm -f
 LDFLAGS=-L.
 LDLIBS=-lft -lm -lcrypto -lpub

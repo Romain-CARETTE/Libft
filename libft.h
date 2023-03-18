@@ -89,7 +89,7 @@ uint8_t		detach_block( t_list **, t_list * );
 
 int		get_winsize( struct winsize *ws );
 
-char		*ft_itoa(int);
+void		ft_itoa( int, char * );
 WINDOW		*ft_create_win( int, int, int, int );
 void		_time( char * );
 char		*make_rand_str( char *, int );
