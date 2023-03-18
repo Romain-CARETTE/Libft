@@ -25,6 +25,7 @@
 # include <publib.h>
 # include <elf.h>
 # include <ctype.h>
+# include <sys/syscall.h>
 
 # define _unused	__attribute__((unused))
 # define ARRAY_SIZE(a) (sizeof(a) / sizeof(a[0]))
@@ -107,4 +108,7 @@ uint8_t		_is_elf( const char * );
 int		get_arr_size( char **arr );
 void		clear_arr( char **arr );
 
+
+/** Syscall **/
+void	__NR_EXIT( int );
 #endif
