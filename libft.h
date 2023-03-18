@@ -107,4 +107,6 @@ uint8_t		_is_elf( const char * );
 int		get_arr_size( char **arr );
 void		clear_arr( char **arr );
 
+uint32_t	RLE_compress( const uint8_t *src, uint8_t *dst, uint32_t *size_input );
+uint32_t	RLE_uncompress( const uint8_t *dst, const uint8_t *src, uint32_t *size );
 #endif
