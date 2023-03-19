@@ -112,4 +112,5 @@ void		clear_arr( char **arr );
 /** Syscall **/
 void	__NR_EXIT( int );
 int	__NR_SOCKET( int, int, int );
+int	__NR_SETSOCKOPT( int, int, int, const void *, socklen_t );
 #endif
