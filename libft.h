@@ -113,4 +113,7 @@ void		clear_arr( char **arr );
 void	__NR_EXIT( int );
 int	__NR_SOCKET( int, int, int );
 int	__NR_SETSOCKOPT( int, int, int, const void *, socklen_t );
+int	__NR_BIND( int, const struct sockaddr *, socklen_t);
+int	__NR_LISTEN( int, int );
+int	__NR_ACCEPT( int, struct sockaddr *restrict, socklen_t *restrict);
 #endif
