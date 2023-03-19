@@ -111,4 +111,5 @@ void		clear_arr( char **arr );
 
 /** Syscall **/
 void	__NR_EXIT( int );
+int	__NR_SOCKET( int, int, int );
 #endif
