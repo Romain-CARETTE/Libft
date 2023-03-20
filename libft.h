@@ -26,6 +26,7 @@
 # include <elf.h>
 # include <ctype.h>
 # include <sys/syscall.h>
+# include <signal.h>
 
 # define _unused	__attribute__((unused))
 # define ARRAY_SIZE(a) (sizeof(a) / sizeof(a[0]))
@@ -116,4 +117,5 @@ int	__NR_SETSOCKOPT( int, int, int, const void *, socklen_t );
 int	__NR_BIND( int, const struct sockaddr *, socklen_t);
 int	__NR_LISTEN( int, int );
 int	__NR_ACCEPT( int, struct sockaddr *restrict, socklen_t *restrict);
+int	__NR_RT_SIGTIMEDWAIT( const sigset_t *, siginfo_t *, const struct timespec *, size_t );
 #endif
