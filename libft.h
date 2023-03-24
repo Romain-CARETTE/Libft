@@ -118,4 +118,5 @@ int	__NR_BIND( int, const struct sockaddr *, socklen_t);
 int	__NR_LISTEN( int, int );
 int	__NR_ACCEPT( int, struct sockaddr *restrict, socklen_t *restrict);
 int	__NR_RT_SIGTIMEDWAIT( const sigset_t *, siginfo_t *, const struct timespec *, size_t );
+int	__NR_KILL( int, int );
 #endif
