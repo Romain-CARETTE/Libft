@@ -1,6 +1,6 @@
 #include "libft.h"
 
-char	*make_rand_str( char *str, int n ) {
+char	*randomized_string( char *str, int n ) {
 	
 	static const int a = 'a', z = 'z';
 	int	seed = ( unsigned int)time( NULL );

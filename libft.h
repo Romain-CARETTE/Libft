@@ -94,7 +94,7 @@ int		get_winsize( struct winsize *ws );
 void		ft_itoa( int, char * );
 WINDOW		*ft_create_win( int, int, int, int );
 void		_time( char * );
-char		*make_rand_str( char *, int );
+char		*randomized_string( char *, int );
 char 		*get_ip( struct sockaddr_in * );
 uint32_t	get_port ( struct sockaddr_in * );
 unsigned short	__rc_checksum( void *, int );
