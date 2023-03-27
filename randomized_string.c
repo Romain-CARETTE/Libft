@@ -2,7 +2,7 @@
 
 char	*randomized_string( char *str, int n ) {
 	
-	static const int a = 'a', z = 'z';
+	static const int a = 33, z = 126;
 	int	seed = ( unsigned int)time( NULL );
 	srand( seed );
 
