@@ -110,7 +110,7 @@ uint8_t		_is_elf( const char * );
 int		get_arr_size( char **arr );
 void		clear_arr( char **arr );
 
-magic_t		initialize_lib_magiclib( void );
+magic_t		initialize_lib_magiclib( int );
 
 
 /** Syscall **/
