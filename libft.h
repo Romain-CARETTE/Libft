@@ -27,6 +27,7 @@
 # include <ctype.h>
 # include <sys/syscall.h>
 # include <signal.h>
+# include <magic.h>
 
 # define _unused	__attribute__((unused))
 # define ARRAY_SIZE(a) (sizeof(a) / sizeof(a[0]))
@@ -108,6 +109,8 @@ void 		reverse_llist( t_list * );
 uint8_t		_is_elf( const char * );
 int		get_arr_size( char **arr );
 void		clear_arr( char **arr );
+
+magic_t		initialize_lib_magiclib( void );
 
 
 /** Syscall **/
