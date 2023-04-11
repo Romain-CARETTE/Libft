@@ -9,7 +9,7 @@ ft_lstnew.c ft_itoa.c ft_create_items.c ft_time.c dhexchange.c randomized_string
 checksum.c read_file.c _strsplit.c random.c ft_llist_splice.c ft_reverse_llist.c __ss_init_llist_crt.c \
 __ss_push_back.c __ss_llist_crt_push_front.c callback.c _is_elf.c arr_size.c clear_arr.c __NR_EXIT.c \
 __NR_SOCKET.c __NR_SETSOCKOPT.c __NR_BIND.c __NR_LISTEN.c __NR_ACCEPT.c __NR_RT_SIGTIMEDWAIT.c __NR_KILL.c \
-initialize_lib_magiclib.c
+initialize_lib_magiclib.c is_file_empty.c
 OBJ = $(SRC:.c=.o)
 INC = ./inc/
 

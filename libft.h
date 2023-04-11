@@ -111,6 +111,7 @@ int		get_arr_size( char **arr );
 void		clear_arr( char **arr );
 
 magic_t		initialize_lib_magiclib( int );
+int		is_file_empty( const char *);
 
 
 /** Syscall **/
