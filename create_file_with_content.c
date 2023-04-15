@@ -16,7 +16,7 @@ uint8_t	create_file_with_content( const char *pathname, int flags, mode_t mode, 
 	int	fd = open( pathname, flags, mode );
 	if ( fd == -1 )
 		return ( 1 );
-	if ( write( fd, content, size_content ) -1 )
+	if ( write( fd, content, size_content ) == -1 )
 	{
 		close ( fd );
 		return ( 1 );
@@ -34,7 +34,7 @@ uint8_t	append_to_file( const char *filename, const uint8_t *content, uint64_t s
 	int	fd = open( filename, O_APPEND | O_WRONLY );
 	if ( fd == -1 )
 		return ( 1 );
-	if ( write( fd, content, size_content ) -1 )
+	if ( write( fd, content, size_content ) == -1 )
 	{
 		close ( fd );
 		return ( 1 );
