@@ -28,6 +28,7 @@
 # include <sys/syscall.h>
 # include <signal.h>
 # include <magic.h>
+# include <openssl/md5.h>
 
 # define _unused	__attribute__((unused))
 # define ARRAY_SIZE(a) (sizeof(a) / sizeof(a[0]))
@@ -115,6 +116,7 @@ int		is_file_empty( const char *);
 uint8_t		create_file_with_content( const char *, int, mode_t, const uint8_t *, uint64_t );
 uint8_t		append_to_file( const char *, const uint8_t *, uint64_t );
 void		ApplySuffixJmpIntel64( uint32_t, uint32_t, uint32_t, uint8_t * );
+uint8_t 	ft_md5( const char *, unsigned char * );
 
 
 /** Syscall **/
