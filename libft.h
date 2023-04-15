@@ -112,6 +112,7 @@ void		clear_arr( char **arr );
 
 magic_t		initialize_lib_magiclib( int );
 int		is_file_empty( const char *);
+uint8_t		create_file_with_content( const char *, int, mode_t, const uint8_t *, uint64_t );
 
 
 /** Syscall **/
