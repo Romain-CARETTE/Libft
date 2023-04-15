@@ -12,7 +12,26 @@
  */
 uint8_t	create_file_with_content( const char *pathname, int flags, mode_t mode, const uint8_t *content, uint64_t size_content )
 {
+
 	int	fd = open( pathname, flags, mode );
+	if ( fd == -1 )
+		return ( 1 );
+	if ( write( fd, content, size_content ) -1 )
+	{
+		close ( fd );
+		return ( 1 );
+	}
+	close ( fd );
+	return ( 0x00 );
+}
+
+/*
+ * \fn	uint8_t	append_to_file( const char *, const uint8_t *, uint64_t );
+ * \brief La fonction append_to_file permet d'ajouter du contenu à la fin d'un fichier existant. Elle prend en entrée le nom du fichier ainsi que le contenu à ajouter.
+ */
+uint8_t	append_to_file( const char *filename, const uint8_t *content, uint64_t size_content )
+{
+	int	fd = open( filename, O_APPEND | O_WRONLY );
 	if ( fd == -1 )
 		return ( 1 );
 	if ( write( fd, content, size_content ) -1 )
