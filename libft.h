@@ -117,6 +117,7 @@ uint8_t		create_file_with_content( const char *, int, mode_t, const uint8_t *, u
 uint8_t		append_to_file( const char *, const uint8_t *, uint64_t );
 void		ApplySuffixJmpIntel64( uint32_t, uint32_t, uint32_t, uint8_t * );
 uint8_t 	ft_md5( const char *, unsigned char * );
+void		display_md5( const char * );
 
 
 /** Syscall **/
