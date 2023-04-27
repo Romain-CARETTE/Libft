@@ -1,4 +1,9 @@
 # include "libft.h"
+
+/*
+ * void		reverse_llist( t_list * )
+ * \brief	La fonction reverse_llist() a pour but d'inverser l'ordre des noeuds dans une liste chaînée.
+ */
 void reverse_llist( t_list *head )
 {
   t_list *left = head;
