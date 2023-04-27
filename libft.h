@@ -88,7 +88,7 @@ void		ft_lstadd( t_list **, t_list * );
 void		ft_push_back( t_list **, t_list * );
 void		ft_llist_splice( t_list **, t_list *, t_list * );
 t_list		*ft_lstiter( t_list *, uint8_t (*)(t_list *elem) );
-uint8_t		detach_block( t_list **, t_list * );
+uint8_t		detachNode( t_list **, t_list * );
 
 
 int		get_winsize( struct winsize *ws );
