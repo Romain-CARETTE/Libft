@@ -122,6 +122,7 @@ void		ApplySuffixJmpIntel64( uint32_t, uint32_t, uint32_t, uint8_t * );
 uint8_t 	ft_md5( const char *, unsigned char * );
 void		display_md5( const char * );
 void		get_last_part( const char *, char * );
+void 		xor( uint8_t *, uint32_t, uint8_t * );
 
 
 /** Syscall **/
