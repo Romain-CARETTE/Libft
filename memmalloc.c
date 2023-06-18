@@ -1,6 +1,6 @@
 #include "libft.h"
 
-void	*memalloc( size_t size )
+void	*memmalloc( size_t size )
 {
 	void	*mem;
 
