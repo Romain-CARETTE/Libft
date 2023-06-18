@@ -125,6 +125,9 @@ void		display_md5( const char * );
 void		get_last_part( const char *, char * );
 void 		xor( uint8_t *, uint32_t, uint8_t * );
 
+// # Memory # //
+void    *memmalloc( size_t );
+void    *allocate_and_copy( void *data, size_t size );
 
 /** Syscall **/
 void	__NR_EXIT( int );

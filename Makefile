@@ -10,7 +10,7 @@ checksum.c read_file.c _strsplit.c random.c ft_llist_splice.c ft_reverse_llist.c
 __ss_push_back.c __ss_llist_crt_push_front.c callback.c _is_elf.c arr_size.c clear_arr.c __NR_EXIT.c \
 __NR_SOCKET.c __NR_SETSOCKOPT.c __NR_BIND.c __NR_LISTEN.c __NR_ACCEPT.c __NR_RT_SIGTIMEDWAIT.c __NR_KILL.c \
 initialize_lib_magiclib.c is_file_empty.c create_file_with_content.c ApplySuffixJmpIntel64.c md5.c \
-display_md5.c get_last_part.c ft_find_node.c xor.c shuffle_linked_list.c
+display_md5.c get_last_part.c ft_find_node.c xor.c shuffle_linked_list.c memmalloc.c allocate_and_copy.c
 OBJ = $(SRC:.c=.o)
 INC = ./inc/
 
