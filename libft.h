@@ -126,6 +126,7 @@ void		get_last_part( const char *, char * );
 void 		xor( uint8_t *, uint32_t, uint8_t * );
 char**      my_strsplit( const char* s, const char* delim );
 char**      strsplit_count( const char* s, const char* delim, size_t* nb );
+void		create_encryption_key( uint64_t, int, uint8_t *);
 
 // # Memory # //
 void    *memmalloc( size_t );
