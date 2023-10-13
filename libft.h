@@ -32,6 +32,8 @@
 
 # define _unused	__attribute__((unused))
 # define ARRAY_SIZE(a) (sizeof(a) / sizeof(a[0]))
+# define MAX(a, b) (((a) > (b)) ? (a) : (b))
+# define RANDOM_NUMBER(min, max) ((int)((double)rand() / RAND_MAX * ((max) - (min) + 1) + (min)))
 
 
 # define ANSI_COLOR_RED		"\x1b[31m"
@@ -43,6 +45,15 @@
 // -------------------- //
 // ** Function llist ** //
 // -------------------- //
+
+typedef struct node
+{
+    uint64_t 	key;
+    void	*content;
+    size_t	size;
+    struct node *left;
+    struct node *right;
+} node ;
 
 typedef struct		s_list
 {
@@ -141,4 +152,19 @@ int	__NR_LISTEN( int, int );
 int	__NR_ACCEPT( int, struct sockaddr *restrict, socklen_t *restrict);
 int	__NR_RT_SIGTIMEDWAIT( const sigset_t *, siginfo_t *, const struct timespec *, size_t );
 int	__NR_KILL( int, int );
+
+/** Rbtree **/
+struct node	*__pg_add_node(node **, uint64_t, void *, uint64_t );
+int 		__pg_search_node( node *, uint64_t );
+node		*__pg_delete_node(node * , uint64_t );
+void 		__pg_postorder( node* root, int (*)( node * ) );
+void 		__pg_inorder( node * );
+void 		__pg_preorder( node * );
+int 		__pg_tree_size( node * );
+node  		*__pg_search_inorder( node *, uint64_t );
+int 		__pg_get_depth( node * );
+node* 		__pg_copy_tree( node * );
+node  		*__pg_reverse_search_inorder( node *, uint64_t );
+void 		__pg_clear_tree( node ** );
+int 		__pg_compare_tree ( node *, node * );
 #endif
